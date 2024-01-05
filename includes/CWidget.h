@@ -1,11 +1,11 @@
-int pWidgets
+int pWidgets, iWidID
 
 :SetWidgetPos
     Memory.GetLabelPointer(pWidgets, @_ZN15CTouchInterface10m_pWidgetsE)
     Memory.GetFuncPointerByCstrName(pWidgets, pWidgets)
-    pWidID *= 0x4
+    iWidID *= 0x4
 
-    pWidgets += pWidID // sete o valor da variavel pWidID e das outras(de posição e escala) antes de chamar a função!                             
+    pWidgets += iWidID // sete o valor da variavel pWidID e das outras(de posiÃ§Ã£o e escala) antes de chamar a funÃ§Ã£o!                             
         
     Memory.Read(pWidgets, pWidgets, 4, False)
     pWidgets += 0xC   
