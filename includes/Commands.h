@@ -9,13 +9,12 @@ return
 // 0x7: mirando com a sniper
 
 :GetPedPointer
-    int hChar, pPed, pGetPed
-
-    0DD0: pGetPed = get_label_addr @_ZN6CPools6GetPedEi 
-    0DD1: pGetPed = get_func_addr_by_cstr_name pGetPed 
+    int pPed
+    0DD0: pPed = get_label_addr @_ZN6CPools6GetPedEi 
+    0DD1: pPed = get_func_addr_by_cstr_name pPed 
 
     0DD3: context_set_reg 0 value $PLAYER_ACTOR 
-    context_call_func pGetPed
+    context_call_func pPed
     0DD4: pPed = context_get_reg 0
 return
 
