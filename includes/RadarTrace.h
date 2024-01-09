@@ -14,8 +14,7 @@ float x, y
     gMobMenu += 8
     Memory.Read(x, gMobMenu, 4, False) // X 
     gMobMenu += 4
-    Memory.Read(y, gMobMenu, 4, False) // Y
-   
+    Memory.Read(y, gMobMenu, 4, False) // Y   
 return                                                   
 
 :gMobileMenu
